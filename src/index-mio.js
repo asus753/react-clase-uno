@@ -1,6 +1,13 @@
-import { Welcome } from './components/Welcome.js';
+import { Tarjeta } from './tarea/Tarea1.js';
 
-ReactDOM.render(<Welcome nombre="Mauro" />, document.getElementById('react-app'));
+ReactDOM.render(
+  <Tarjeta
+    nombre="Mauro Perez"
+    titulo="Programador Front End"
+    imagen="https://avatars1.githubusercontent.com/u/56839325?s=400&u=d9c44cc49549346955d3e23a4c4e0154adcca839&v=4"
+  />,
+  document.getElementById('react-app')
+);
 
 // import { Button } from './components/Button.js';
 
