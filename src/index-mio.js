@@ -1,13 +1,22 @@
-import { Tarjeta } from './tarea/Tarea1.js';
+import { Tarjeta, BlogPost } from './tarea/Tarea1.js';
 
+
+//---------------------------------------------TAREA 1 -----------------------------------------------------------------
 ReactDOM.render(
-  <Tarjeta
-    nombre="Mauro Perez"
-    titulo="Programador Front End"
-    imagen="https://avatars1.githubusercontent.com/u/56839325?s=400&u=d9c44cc49549346955d3e23a4c4e0154adcca839&v=4"
+  <BlogPost
+    tituloBlog="ardillas"
+    parrafos={`Hoy vi una ardilla.
+    La ardilla era negra, era más grande que otras ardillas, tenía muchos dientes grandes y encima andaba siempre en cuatro patas, moviendo la cola.
+    Creo que puede haber sido un perro, dado que en Argentina no hay ardillas.`}
+    autor={{
+      nombre:"Mauro Perez",
+      titulo:"Programador Front End",
+      imagen:"https://avatars1.githubusercontent.com/u/56839325?s=400&u=d9c44cc49549346955d3e23a4c4e0154adcca839&v=4"
+    }}
   />,
   document.getElementById('react-app')
-);
+)
+//------------------------------------------------------------------------------------------------------------------------
 
 // import { Button } from './components/Button.js';
 
