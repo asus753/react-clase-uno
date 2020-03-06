@@ -1,8 +1,8 @@
 import { Tarjeta, BlogPost } from './tarea/Tarea1.js';
-
+import {MatchNombre, PasswordInput, ValidationInput} from './tarea/Tarea2.js'
 
 //---------------------------------------------TAREA 1 -----------------------------------------------------------------
-ReactDOM.render(
+/* ReactDOM.render(
   <BlogPost
     tituloBlog="ardillas"
     parrafos={`Hoy vi una ardilla.
@@ -15,8 +15,19 @@ ReactDOM.render(
     }}
   />,
   document.getElementById('react-app')
-)
-//------------------------------------------------------------------------------------------------------------------------
+) */
+//-------------------------------------------------TAREA 2---------------------------------------------------------------
+//ReactDOM.render(<MatchNombre nombre="Mauro Perez"/>,document.getElementById('react-app'))
+
+//ReactDOM.render(<PasswordInput minLength="8"/>,document.getElementById('react-app'))
+
+ReactDOM.render(<ValidationInput validation={
+  (value) => value.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
+}/>,document.getElementById('react-app'))
+//-------------------------------------------------------------------------------------------------------------------------
+
+
+
 
 // import { Button } from './components/Button.js';
 
