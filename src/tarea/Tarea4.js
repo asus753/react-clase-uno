@@ -7,13 +7,13 @@
  */
 
 export function ControlledCheckbox(props) {
-    const [input, setInput] = React.useState(props.value)
-    return <React.Fragment>
+
+    return (<React.Fragment>
         <label>
-            <input type="checkbox" onChange={() => {setInput(!input)}} checked={input}/>
+            <input type="checkbox" onChange={props.onChange} checked={props.value}/>
             {props.name}
         </label><br/>
-    </React.Fragment>
+    </React.Fragment>)
 }
 
 /*
@@ -38,11 +38,19 @@ export function ControlledCheckbox(props) {
  */
 
 export function CheckboxListWithState(props) {
-    const checkboxs= []  
-    Object.keys(props.items).forEach((e,i) => {
-        checkboxs.push(<ControlledCheckbox name={e} value={props.items[e]} key={i} />)
-    })
-    return checkboxs   
+    const [checkboxes, setCheckboxes] = React.useState(props.items) 
+
+    return (<div>
+        {Object.entries(checkboxes).map(([name, value]) => (
+            <ControlledCheckbox
+              key={name}
+              name={name}
+              value={value}
+              onChange={() => {setCheckboxes({...checkboxes,[name] : !value})}}/>
+        ))}
+    </div>)  
+
+    // .map( () => () ) ---------> Tener muy en cuenta
 }
 
 /*
