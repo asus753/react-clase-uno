@@ -48,6 +48,9 @@ export function CheckboxListWithState(props) {
               value={value}
               onChange={() => {setCheckboxes({...checkboxes,[name] : !value})}}/>
         ))}
+        <button onClick={() => {setCheckboxes({...checkboxes, uno:false})}}>
+            Uno false
+        </button>
     </div>)  
 
     // .map( () => () ) ---------> Tener muy en cuenta
