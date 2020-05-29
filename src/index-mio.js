@@ -1,6 +1,47 @@
-import { Welcome } from './components/Welcome.js';
+import { Tarjeta, BlogPost } from './tarea/Tarea1.js';
+import {MatchNombre, PasswordInput, ValidationInput} from './tarea/Tarea2.js'
+import {UncontrolledCheckbox, CheckboxList} from './tarea/Tarea3.js'
+import {ControlledCheckbox, CheckboxListWithState} from './tarea/Tarea4.js'
 
-ReactDOM.render(<Welcome nombre="Mauro" />, document.getElementById('react-app'));
+//---------------------------------------------TAREA 1 -----------------------------------------------------------------
+/* ReactDOM.render(
+  <BlogPost
+    tituloBlog="ardillas"
+    parrafos={`Hoy vi una ardilla.
+    La ardilla era negra, era más grande que otras ardillas, tenía muchos dientes grandes y encima andaba siempre en cuatro patas, moviendo la cola.
+    Creo que puede haber sido un perro, dado que en Argentina no hay ardillas.`}
+    autor={{
+      nombre:"Mauro Perez",
+      titulo:"Programador Front End",
+      imagen:"https://avatars1.githubusercontent.com/u/56839325?s=400&u=d9c44cc49549346955d3e23a4c4e0154adcca839&v=4"
+    }}
+  />,
+  document.getElementById('react-app')
+) */
+//-------------------------------------------------TAREA 2---------------------------------------------------------------
+/* ReactDOM.render(<MatchNombre nombre="Mauro Perez"/>,document.getElementById('react-app'))
+
+ReactDOM.render(<PasswordInput minLength="8"/>,document.getElementById('react-app'))
+
+ReactDOM.render(<ValidationInput validation={
+  (value) => value.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
+}/>,document.getElementById('react-app')) */
+//-------------------------------------------------TAREA 3---------------------------------------------------------------------
+/* ReactDOM.render(<UncontrolledCheckbox name="Hola mundo 2" initalValue={true}/>, document.getElementById('react-app'))
+
+ReactDOM.render(<CheckboxList items={{
+  uno: false,
+  dos: true,
+  tres: false
+}}/>, document.getElementById('react-app')) */
+
+//------------------------------------------------TAREA 4 ----------------------------------------------------------------
+
+ReactDOM.render(<CheckboxListWithState items={{
+  uno: true,
+  dos: true,
+  tres: true
+}}/>, document.getElementById('react-app'))
 
 // import { Button } from './components/Button.js';
 
